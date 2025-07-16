@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aryan Mehta — Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #141414;
+      color: white;
+    }
+    .poster:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+      z-index: 10;
+    }
+    .modal-bg {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body class="font-sans overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-black">
+    <h1 class="text-3xl font-bold text-red-600">Aryan Mehta</h1>
+    <p class="italic">Turning ideas into elegant code, one pixel at a time.</p>
+  </header>
+
+  <!-- Intro section -->
+  <section class="px-6 py-6">
+    <h2 class="text-2xl mb-2 font-semibold">About Aryan</h2>
+    <p class="text-gray-300">B.Tech in Computer Science from IIT Delhi | AWS & Google Cloud Certified | Ex-Flipkart Full Stack Dev | Passionate about building intelligent, scalable, and beautiful web applications. Loves chess, trekking, and photography.</p>
+  </section>
+
+  <!-- Catalog Row: Projects -->
+  <section class="px-6 py-4">
+    <h2 class="text-xl font-bold mb-3">🚀 Featured Projects</h2>
+    <div class="flex overflow-x-scroll space-x-4 pb-4">
+      <div class="poster w-48 flex-shrink-0 bg-gray-800 rounded-lg cursor-pointer" onclick="openModal('project1')">
+        <img src="https://source.unsplash.com/300x400/?health,app" class="rounded-t-lg" />
+        <p class="p-2 font-medium">HealthAI</p>
+      </div>
+      <div class="poster w-48 flex-shrink-0 bg-gray-800 rounded-lg cursor-pointer" onclick="openModal('project2')">
+        <img src="https://source.unsplash.com/300x400/?traffic,technology" class="rounded-t-lg" />
+        <p class="p-2 font-medium">SmartTraffic</p>
+      </div>
+      <div class="poster w-48 flex-shrink-0 bg-gray-800 rounded-lg cursor-pointer" onclick="openModal('project3')">
+        <img src="https://source.unsplash.com/300x400/?shopping,ecommerce" class="rounded-t-lg" />
+        <p class="p-2 font-medium">ShopEase</p>
+      </div>
+      <div class="poster w-48 flex-shrink-0 bg-gray-800 rounded-lg cursor-pointer" onclick="openModal('project4')">
+        <img src="https://source.unsplash.com/300x400/?education,online" class="rounded-t-lg" />
+        <p class="p-2 font-medium">EduConnect</p>
+      </div>
+      <div class="poster w-48 flex-shrink-0 bg-gray-800 rounded-lg cursor-pointer" onclick="openModal('project5')">
+        <img src="https://source.unsplash.com/300x400/?resume,portfolio" class="rounded-t-lg" />
+        <p class="p-2 font-medium">PortfolioAI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Row: Skills -->
+  <section class="px-6 py-4">
+    <h2 class="text-xl font-bold mb-3">💻 Tech Stack</h2>
+    <div class="flex overflow-x-scroll space-x-4 pb-4">
+      <div class="poster w-36 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>React</p>
+      </div>
+      <div class="poster w-36 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>Next.js</p>
+      </div>
+      <div class="poster w-36 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>Node.js</p>
+      </div>
+      <div class="poster w-36 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>Python</p>
+      </div>
+      <div class="poster w-36 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>AWS</p>
+      </div>
+      <div class="poster w-36 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>Docker</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Row: Certifications -->
+  <section class="px-6 py-4">
+    <h2 class="text-xl font-bold mb-3">🎖️ Certifications</h2>
+    <div class="flex overflow-x-scroll space-x-4 pb-4">
+      <div class="poster w-52 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>AWS Certified Developer</p>
+      </div>
+      <div class="poster w-52 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>Google Associate Cloud Engineer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Row: Experience -->
+  <section class="px-6 py-4">
+    <h2 class="text-xl font-bold mb-3">🏢 Experience</h2>
+    <div class="flex overflow-x-scroll space-x-4 pb-4">
+      <div class="poster w-64 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>Flipkart<br>Full Stack Developer<br>3 years</p>
+      </div>
+      <div class="poster w-64 flex-shrink-0 bg-gray-800 rounded-lg p-4 text-center">
+        <p>HealthTech Startup<br>Lead Developer<br>2 years</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="px-6 py-4">
+    <h2 class="text-xl font-bold mb-3">📬 Contact Aryan</h2>
+    <p>Email: <a href="mailto:aryan.dev@gmail.com" class="text-red-500">aryan.dev@gmail.com</a></p>
+  </section>
+
+  <!-- Modals -->
+  <div id="project1" class="hidden fixed inset-0 modal-bg flex items-center justify-center p-4">
+    <div class="bg-gray-900 p-6 rounded-lg max-w-lg">
+      <h2 class="text-2xl font-bold text-red-500 mb-4">HealthAI</h2>
+      <p>AI-driven health insights platform that analyzes lifestyle data and gives personalized wellness suggestions. Used by over 10,000 users globally.</p>
+      <button class="mt-4 px-4 py-2 bg-red-600 rounded" onclick="closeModal('project1')">Close</button>
+    </div>
+  </div>
+
+  <div id="project2" class="hidden fixed inset-0 modal-bg flex items-center justify-center p-4">
+    <div class="bg-gray-900 p-6 rounded-lg max-w-lg">
+      <h2 class="text-2xl font-bold text-red-500 mb-4">SmartTraffic</h2>
+      <p>IoT-based adaptive traffic light system with emergency vehicle priority and congestion prediction. Piloted successfully in Bengaluru.</p>
+      <button class="mt-4 px-4 py-2 bg-red-600 rounded" onclick="closeModal('project2')">Close</button>
+    </div>
+  </div>
+
+  <div id="project3" class="hidden fixed inset-0 modal-bg flex items-center justify-center p-4">
+    <div class="bg-gray-900 p-6 rounded-lg max-w-lg">
+      <h2 class="text-2xl font-bold text-red-500 mb-4">ShopEase</h2>
+      <p>Scalable e-commerce SaaS with AI-driven recommendations, advanced analytics, and smooth UX. Serves multiple retail clients worldwide.</p>
+      <button class="mt-4 px-4 py-2 bg-red-600 rounded" onclick="closeModal('project3')">Close</button>
+    </div>
+  </div>
+
+  <div id="project4" class="hidden fixed inset-0 modal-bg flex items-center justify-center p-4">
+    <div class="bg-gray-900 p-6 rounded-lg max-w-lg">
+      <h2 class="text-2xl font-bold text-red-500 mb-4">EduConnect</h2>
+      <p>Virtual classroom app connecting teachers and students with seamless video, chat, and content sharing. Adopted by 50+ schools.</p>
+      <button class="mt-4 px-4 py-2 bg-red-600 rounded" onclick="closeModal('project4')">Close</button>
+    </div>
+  </div>
+
+  <div id="project5" class="hidden fixed inset-0 modal-bg flex items-center justify-center p-4">
+    <div class="bg-gray-900 p-6 rounded-lg max-w-lg">
+      <h2 class="text-2xl font-bold text-red-500 mb-4">PortfolioAI</h2>
+      <p>AI-based portfolio and resume builder that analyzes your skills and suggests optimized content. Popular among job seekers and freelancers.</p>
+      <button class="mt-4 px-4 py-2 bg-red-600 rounded" onclick="closeModal('project5')">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
